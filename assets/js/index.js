@@ -82,7 +82,9 @@ $(() => {
         const email = $(".email").val().trim();
         const phone = $(".phone").val().trim();
         const check = $(".form-check-input").is(":checked");
-        if(!email || !phone || !check) return { status: false, msg: 'The fields are mandatory' }
+        if(!email)  return { status: false, msg: 'Email cannot be empty' }
+        if(!phone)  return { status: false, msg: 'Phone cannot be empty' }
+        if(!check)  return { status: false, msg: 'Accept to the terms and conditions' }
         if(!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) return { status: false, msg: 'Email Address must be correct' } 
         if(!phone.match(/^[0-9]{9,12}$/)) return { status: false, msg: 'Phone must be correct' } 
         else return { status: true, msg: 'Forward to the step successfully' }
