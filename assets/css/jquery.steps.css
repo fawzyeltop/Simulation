@@ -468,6 +468,7 @@
 }
 
 @media (max-width:767px) {
+
     .wizard>.steps>ul>li {
         display: block;
         float: left;
@@ -483,5 +484,22 @@
     .wizard-content .wizard.vertical>.steps {
         width: 15%
     }
+    .notificationSuccess,
+.notificationError {
+  width: 250px !important;
+}
+
+.notificationSuccess h4,
+.notificationError h4 {
+    font-size: 16px;
+} 
+
+.notificationSuccess p,
+.notificationError p {
+    font-size: 13px !important;
+} 
+
+
+
 }
 

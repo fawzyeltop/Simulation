@@ -1,7 +1,7 @@
 $(() => {
 
     
-    // Success Function
+    // Success Function if needed
     const successMsg = (msg) => {
         $(".notificationSuccess")
             .html(
@@ -16,7 +16,7 @@ $(() => {
                 `
             )
             .show(100)
-            .delay(3000)
+            .delay(2000)
             .hide(100);
     }
 
@@ -36,7 +36,7 @@ $(() => {
                 `
             )
             .show(100)
-            .delay(3000)
+            .delay(2000)
             .hide(100);
     }
 
@@ -135,7 +135,6 @@ $(() => {
                     errorMsg(obj.msg);
                     return false;
                 } else if(obj.status === true) {
-                    successMsg(obj.msg);
                     return true;
                 }
             }
@@ -145,7 +144,6 @@ $(() => {
                     errorMsg(obj.msg);
                     return false;
                 } else if(obj.status === true) {
-                    successMsg(obj.msg);
                     return true;
                 }
             }
@@ -155,12 +153,10 @@ $(() => {
                     errorMsg(obj.msg);
                     return false;
                 } else if(obj.status === true) {
-                    successMsg(obj.msg);
                     return true;
                 }
             }
             if(currentIndex === 3) {
-                successMsg('Forward to the step successfully');
                 return true;
             }
             if(currentIndex === 4) {
@@ -169,7 +165,6 @@ $(() => {
                     errorMsg(obj.msg);
                     return false;
                 } else if(obj.status === true) {
-                    successMsg(obj.msg);
                     return true;
                 }
              }
