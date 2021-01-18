@@ -2006,7 +2006,7 @@ var defaults = $.fn.steps.defaults = {
          * @default "Finish"
          * @for defaults
          **/
-        finish: "Finish",
+        finish: `Finish <i class="fas fa-check"></i>`,
 
         /**
          * Label for the next button.

@@ -52,35 +52,144 @@
     display: block;
     width: 100%;
 }
-
-.wizard.vertical>.steps {
-    display: inline;
-    float: left;
-    width: 30%;
-}
-
-.wizard>.steps .number {
-    font-size: 18px;
-}
-
-
-.wizard>.steps>ul>li,
-.wizard>.actions>ul>li {
-    float: left;
-}
+.wizard>.steps>ul {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} 
 
 .wizard>.steps>ul>li {
+    display: table-cell;
+    width: auto;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
+}
+
+.wizard>.steps>ul>li:after,
+.wizard>.steps>ul>li:before {
+    content: '';
+    z-index: 9;
+    display: block;
+    position: absolute;
+    top: 25px;
+    width: 50%;
+    height: 3px;
+    background-color: #28a745 
+}
+.wizard>.steps>ul>li.current:after,
+.wizard>.steps>ul>li.current~li:after,
+.wizard>.steps>ul>li.current~li:before {
+    background-color: #F3F3F3
+}
+.wizard>.steps>ul>li.current .number:after,
+.wizard>.steps>ul>li.done .number:after {
+    border-top-color: #28a745 
+}
+.wizard>.steps>ul>li.current:after,
+.wizard>.steps>ul>li.current~li:after,
+.wizard>.steps>ul>li.current~li:before {
+    background-color: #F3F3F3
+}
+
+.wizard>.steps>ul>li:before {
+    left: 0
+}
+
+.wizard>.steps>ul>li:after {
+    right: 0;
+}
+.wizard>.steps>ul>li:first-child:before,
+.wizard>.steps>ul>li:last-child:after {
+    content: none
+}
+
+.wizard>.steps>ul>li a {
+    position: relative;
+    padding-top: 52px;
+    display: block;
+    text-decoration: none;
+}
+
+.wizard>.steps>ul>li.disabled a {
+    color: #999;
+    cursor: default;
+}
+
+.wizard>.steps>ul>li.current a {
+    color: #2f3d4a;
+    cursor: default;
+}
+
+.wizard>.steps>ul>li.done a {
+    color: #999;
+}
+
+.wizard>.steps>ul>li.error a {
+    color: #dc3545;
+}
+
+.wizard>.steps>ul>li a .number {
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -24px;
+    z-index: 10;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    border: 3px solid #F3F3F3;
+    font-size: 1.3rem;
+    border-radius: 50%;
+}
+
+.wizard>.steps>ul>li.current a .number {
+    background-color: #fff;
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.wizard>.steps>ul>li.done a .number {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.wizard>.steps>ul>li.error a .number {
+    background-color: #dc3545;
+    border-color:#dc3545;
+    color: #fff;
+}
+
+
+/* .wizard>.steps .number {
+    font-size: 18px;
+} */
+
+
+/* .wizard>.steps>ul>li,
+.wizard>.actions>ul>li {
+    float: left;
+} */
+
+/* .wizard>.steps>ul>li {
     width: calc(100% / 6);
     display: flex;
     justify-content: center;
-}
+} */
 
 .wizard.vertical>.steps>ul>li {
     float: none;
     width: 100%;
 }
 
-.wizard>.steps a,
+/* .wizard>.steps a,
 .wizard>.steps a:hover,
 .wizard>.steps a:active {
     display: block;
@@ -90,10 +199,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 
-.wizard>.steps .disabled a span.number {
+/* .wizard>.steps .disabled a span.number {
     display: block;
     background-color: #e4e4e4; 
     color: #444;
@@ -102,19 +211,19 @@
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
-}
+} */
 
 
-.wizard>.steps .current a span.number {
+/* .wizard>.steps .current a span.number {
     display: block;
-    background-color: #30aa4c; 
+    background-color: #28a745; 
     color: #fff;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
-    font-size: 12px;
+    font-size: 25px;
     text-decoration: none;
 }
 
@@ -129,12 +238,12 @@
     line-height: 50px;
     font-size: 12px;
     text-decoration: none;
-}
+} */
 
 
-.wizard>.steps .error a span.number {
+/* .wizard>.steps .error a span.number {
     background-color: #dc3545;
-} 
+}  */
 
 .wizard>.content {
     display: block;
@@ -173,10 +282,6 @@
     height: 100%;
 }
 
-.wizard>.content>.body input {
-    display: block;
-    border: 1px solid #ccc;
-}
 
 .wizard>.content>.body input[type="checkbox"] {
     display: inline-block;
@@ -214,23 +319,16 @@
 }
 
 .wizard>.actions>ul {
-    display: inline-block;
+    display: flex;
     text-align: right;
 }
 
-.wizard>.actions>ul>li {
-    margin: 0 0.5em;
-}
-
-.wizard>.actions>ul>li:first-child {
-    margin: 0;
+.wizard>.actions>ul>li:nth-child(2), 
+.wizard>.actions>ul>li:last-child {
+    margin-left: 12px;
 }
 
 
-
-.wizard.vertical>.actions>ul>li {
-    margin: 0 0 0 1em;
-}
 
 .wizard>.actions a,
 .wizard>.actions a:hover,
@@ -369,14 +467,21 @@
     position: relative;
 }
 
-@media (min-width: 576px) and (max-width: 991px) {
+@media (max-width:767px) {
     .wizard>.steps>ul>li {
-        width: 50%;
+        display: block;
+        float: left;
+        width: 50%
+    }
+    .wizard>.steps>ul>li:first-child:before {
+        content: ''
+    }
+    .wizard>.steps>ul>li:last-child:after {
+        content: '';
+        background-color: #28a745 
+    }
+    .wizard-content .wizard.vertical>.steps {
+        width: 15%
     }
 }
 
-@media (max-width: 575px) {
-    .wizard>.steps>ul>li {
-        width: 100%;
-    }
-}

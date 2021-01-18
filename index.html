@@ -32,15 +32,15 @@
                                 <h3 class="text-center">Complete the Motor Coverage</h3>
                             </div>
                         </div>
-                        <div class="row mt-3">
+                        <!-- <div class="row mt-3">
                             <div class="col-12">
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 17%"><span
-                                            id="percentage">17%</span></div>
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 16.6%"><span
+                                            id="percentage">16.6%</span></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row mt-3">
                             <div class="col-12">
                                 <form id="wizard" action="#">
@@ -49,19 +49,14 @@
                                         <section class="location" id="location">
                                             <div class="innerContent text-center">
                                                 <div class="icon mb-2">
-                                                    <i class="fas fa-location-arrow"></i>
+                                                    <img src="assets/img/motivation.svg" alt="motivation" title="motivation" style="height: 80px; width: 80px"/>
                                                 </div>
                                                 <h4>What's your vehicle location?</h4>
                                                 <div class="row">
-                                                    <div class="col-md-6 col-sm-8 mx-auto">
+                                                    <div class="col-lg-4 col-md-7 col-sm-9 mx-auto">
                                                         <div class="form-group mb-0">
-                                                            <div class="input-group input-group-lg">
-                                                                <div class="input-group-prepend">
-                                                                  <span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
-                                                                </div>
-                                                                <input type="text" class="form-control locationNo" name="locationNo" id="locationNo" aria-label="location" aria-describedby="location" placeholder="Enter the PostCode">
-                                                              </div>
-                                                              <small class="form-text text-press text-muted">Enter the PostCode Correctly <i class="fas fa-exclamation-triangle"></i>
+                                                            <input type="text" class="form-control form-control-lg locationNo custom-form-control custom-form-control-location" name="locationNo" id="locationNo" aria-label="location" aria-describedby="location" placeholder="PostCode" minlength="5" maxlength="5" autocomplete="off">
+                                                              <small class="form-text text-press text-muted">PostCode is composed of 5 numbers only <i class="fas fa-exclamation-triangle"></i>
                                                               </small>
                                                         </div>
                                                     </div>
@@ -72,20 +67,15 @@
                                         <section class="registration" id="registration">
                                             <div class="innerContent text-center">
                                                 <div class="icon mb-2">
-                                                    <i class="fas fa-car"></i>
+                                                    <img src="assets/img/motivation.svg" alt="motivation" title="motivation" style="height: 80px; width: 80px"/>
                                                 </div>
                                                 <h4>What's your vehicle registration number?</h4>
                                                 <div class="row">
-                                                    <div class="col-md-6 col-sm-8 mx-auto">
+                                                    <div class="col-lg-4 col-md-7 col-sm-9 mx-auto">
                                                         <div class="form-group mb-0">
-                                                            <div class="input-group input-group-lg">
-                                                                <div class="input-group-prepend">
-                                                                  <span class="input-group-text"> <i class="fas fa-car"></i></span>
-                                                                </div>
-                                                                <input type="text" class="form-control registrationNo" name="registrationNo" id="registrationNo" aria-label="registration" aria-describedby="registration" placeholder="Enter the Car Number">
-                                                              </div>
-                                                              <small class="form-text text-press text-muted">Enter the vehicle registration number Correctly<i class="fas fa-exclamation-triangle"></i>
-                                                              </small>
+                                                            <input type="text" class="form-control form-control-lg registrationNo custom-form-control custom-form-control-registration" name="registrationNo" id="registrationNo" aria-label="registration" aria-describedby="registration" placeholder="Car Number" minlength="4" maxlength="15" autocomplete="off">
+                                                            <small class="form-text text-press text-muted">The car number is between 4 and 15 chars <i class="fas fa-exclamation-triangle"></i>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -95,20 +85,15 @@
                                         <section class="nricNumber" id="nricNumber">
                                             <div class="innerContent text-center">
                                                 <div class="icon mb-2">
-                                                    <i class="far fa-id-card"></i>
+                                                    <img src="assets/img/motivation.svg" alt="motivation" title="motivation" style="height: 80px; width: 80px"/>
                                                 </div>
                                                 <h4>Waht's your NRIC number?</h4>
                                                 <div class="row">
-                                                    <div class="col-md-6 col-sm-8 mx-auto">
+                                                    <div class="col-lg-4 col-md-7 col-sm-9 mx-auto">
                                                         <div class="form-group mb-0">
-                                                            <div class="input-group input-group-lg">
-                                                                <div class="input-group-prepend">
-                                                                  <span class="input-group-text"><i class="far fa-id-card"></i></span>
-                                                                </div>
-                                                                <input type="text" class="form-control nricNumberNo" name="nricNumberNo" id="nricNumberNo" aria-label="nricNumberNo" aria-describedby="nricNumberNo" placeholder="Enter the NRIC Number">
-                                                              </div>
-                                                              <small class="form-text text-press text-muted">Enter the NRIC Number Correctly <i class="fas fa-exclamation-triangle"></i>
-                                                              </small>
+                                                            <input type="text" class="form-control form-control-lg  custom-form-control custom-form-control-nric nricNumberNo" name="nricNumberNo" id="nricNumberNo" aria-label="nricNumber" aria-describedby="nricNumber" placeholder="NRIC Number" minlength="4" maxlength="15" autocomplete="off">
+                                                            <small class="form-text text-press text-muted">The NRIC number is between 4 and 15 chars <i class="fas fa-exclamation-triangle"></i>
+                                                            </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -168,31 +153,21 @@
                                         <section class="emailPhone" id="emailPhone">
                                             <div class="innerContent text-center">
                                                 <div class="icon mb-2">
-                                                    <i class="far fa-smile-beam"></i>
+                                                    <img src="assets/img/motivation.svg" alt="motivation" title="motivation" style="height: 80px; width: 80px"/>
                                                 </div>
                                                 <h4>Alright! You're just one step away from getting the right coverage.
                                                 </h4>
                                                 <p>Please provide your email and phone number to proceed.</p>
                                                 <div class="row">
-                                                    <div class="col-md-6 com-sm-8 mx-auto text-left">
+                                                    <div class="col-lg-4 col-md-7 col-sm-9 mx-auto text-left">
                                                         <div class="form-group">
-                                                            <div class="input-group input-group-lg">
-                                                                <div class="input-group-prepend">
-                                                                  <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                                                                </div>
-                                                                <input type="email" class="form-control email" name="email" id="email" aria-label="email" aria-describedby="email" placeholder="Enter the email">
-                                                              </div>
-                                                              <small class="form-text text-press text-muted">Enter the Email Correctly <i class="fas fa-exclamation-triangle"></i>
-                                                              </small>
+                                                            <input type="email" class="form-control form-control-lg custom-form-control custom-form-control-email email" name="email" id="email" aria-label="email" aria-describedby="email" placeholder="Email Address">
+                                                            <small class="form-text text-press text-muted">Enter the Email Correctly <i class="fas fa-exclamation-triangle"></i>
+                                                            </small>
                                                         </div>
                                                         <div class="form-group">
-                                                            <div class="input-group input-group-lg">
-                                                                <div class="input-group-prepend">
-                                                                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                                                </div>
-                                                                <input type="text" class="form-control phone" name="phone" id="phone" aria-label="phone" aria-describedby="phone" placeholder="Enter the phone">
-                                                              </div>
-                                                            <small class="form-text text-press text-muted">Enter the Phone No Correctly <i class="fas fa-exclamation-triangle"></i>
+                                                            <input type="text" class="form-control form-control-lg custom-form-control custom-form-control-phone phone" name="phone" id="phone" aria-label="phone" aria-describedby="phone" placeholder="Phone Number">
+                                                            <small class="form-text text-press text-muted">Enter the Phone No without country code <i class="fas fa-exclamation-triangle"></i>
                                                             </small>
                                                         </div>
                                                         <div class="form-check">
@@ -207,11 +182,11 @@
                                         <section class="premium" id="premium">
                                             <div class="innerContent text-center">
                                                 <div class="icon mb-2">
-                                                    <i class="fab fa-accusoft"></i>
+                                                    <img src="assets/img/motivation.svg" alt="motivation" title="motivation" style="height: 80px; width: 80px"/>
                                                 </div>
                                                 <h4>Getting your premium...</h4>
                                                 <div class="row">
-                                                    <div class="col-md-6 com-sm-8 mx-auto">
+                                                    <div class="col-lg-5 col-md-7 col-sm-9 mx-auto mx-auto">
                                                         <div class="progress">
                                                             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ></div>
                                                           </div>
