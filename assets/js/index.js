@@ -97,6 +97,9 @@ $(() => {
         transitionEffect: "slideLeft",
         titleTemplate: '<span class="number">#index#</span> #title#',
         onStepChanging:  (event, currentIndex, newIndex) => {
+            if (currentIndex > newIndex) {
+                 return true;
+            }
             if(newIndex === 3) {
                 // Here is the back-end team will make Request to the Server-Side for Vehicle Details
                 const locationNo = $(".locationNo").val();
